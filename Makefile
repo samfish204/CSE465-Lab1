@@ -25,13 +25,12 @@ PROBLEMS = $(basename  $(wildcard *.expected))
 #  no-todos-in-XXXX.YYY  will make sure the word 'todo' is not in the file anymore
 #
 RULES =  $(addprefix check-, $(PROBLEMS))
-RULES +=  $(addprefix no-loops-in-, $(addsuffix .java, $(PROBLEMS)))
-RULES +=  $(addprefix no-todos-in-, $(addsuffix .java, $(PROBLEMS)))
+RULES +=  no-loops-in-Counter.java
+RULES +=  no-todos-in-Counter.java
 
 
 # The student code is saved to XXX.output
 OUTPUTS = $(addsuffix .output,  $(PROBLEMS))
-
 
 default: all
 
