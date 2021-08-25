@@ -36,7 +36,6 @@
 
 (display "Your Lambda for the perimeter:")(newline)
 ;; FILL IT IN HERE
-(display ((lambda (length width) (+ (* 2 length) (* 2 width))) 50 25))
 (newline)
 
 
@@ -54,7 +53,6 @@
 
 (define (distance x1 y1 x2 y2)
 ;;; FILL THIS IN
-(sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1))))
 )
 
 (display "Distance")(newline)
@@ -73,7 +71,6 @@
 ;; A number is small if it is less than 10
 (define (isSmall x)
 ;;; FILL THIS IN	
-(if (< x 10) #t #f)
 )
 
 (display "isSmall")(newline)
@@ -104,7 +101,6 @@
 ;  3 | 4
 (define (isInQuadrant1 x y)
 ;;; FILL THIS IN
-(if (and (>= x 0) (>= y 0)) #t #f)
 )
 
 (display "IsInQuadrant1:")(newline)
@@ -116,11 +112,6 @@
 
 (define (quadrant x y)
 ;;; FILL THIS IN
-(cond
-  	((and (>= x 0) (>= y 0)) 1)
-	((and (< x 0) (>= y 0)) 2)
-	((and (< x 0) (< y 0)) 3)
-	(else 4))
 )
 
 
@@ -134,9 +125,6 @@
 (define (computeGrossPay hours rate)
 ;;; FILL THIS IN
 ;;; Hours over 40 are given time and half. Hours over 60 are given double time.
-(if (< 60 hours) (+ (* 40 rate) (* 20 (* rate 1.5)) (* (- hours 60) (* rate 2)))
-(if (< 40 hours) (+ (* 40 rate) (* (- hours 40) (* rate 1.5)))
-(* hours rate)))
 )
 
 (display "computeGrossPay:")(newline)
