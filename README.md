@@ -1,7 +1,6 @@
 # 465-java-recursion
 
 1. Write a recursive Java program to print all 8-digit binary numbers.  No loops allowed. 
-
 2. Complete the parts indicated in the `basics.scm` file 
 
 # Submitting Your Code
