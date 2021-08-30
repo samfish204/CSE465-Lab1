@@ -3,7 +3,7 @@
    'f o r'  is not allowed
    'w h i l e' is not allowed. 
    You can not even use them in comments!
-/*
+*/
 
 public class Counter {
 	/* TODO: Write a recursive function here. Call it 'printAll'. 
