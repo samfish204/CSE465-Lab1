@@ -26,6 +26,8 @@ update:
 	git pull https://gitlab.csi.miamioh.edu/cse465/instructor/lab01.git master
 
 submit: update check
+	git add -u 
+	git commit -m "Final submission"
 	git push origin master
 
 # This uses grep to make sure there are no for-loops or while-loops
