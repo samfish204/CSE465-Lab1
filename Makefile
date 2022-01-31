@@ -3,11 +3,11 @@ check: check-counter check-basics
 
 
 check-counter: Counter.output
-	cmp Counter.output Counter.expected
+	diff -y Counter.output Counter.expected
 	@echo counter - Success!
 
 check-basics: basics.output 
-	cmp basics.output basics.expected
+	diff -ywas basics.output basics.expected
 	@echo basics - Success!
 
 clean:

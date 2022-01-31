@@ -14,6 +14,7 @@ Recursive problems can be puzzling, but it is a skill that is valuable to have.
 2.  Think of _how_ you could incorporate a solution to the subproblem into a _slightly_ larger problem. Can I _use_ the 1-bit solution to print every 2-bit number?  This may involve minor asjustments to the 1-bit solution. 
 3.  If you have done steps 1 and 2, you might be able to (inductively) solve it for n-bits!  
 
+
 # Testing  your Code
 
 1.  Test Counter using `make check-counter`

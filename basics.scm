@@ -1,6 +1,13 @@
 ; basics.scm
 ; From within Scheme interpreter: (load "basics.scm")
 
+; This little snippet prevents scheme from continuing after the 
+; first error is encountered. It just prints the error and exits scheme. 
+(bind-default-condition-handler '() (lambda (x) (display x) (exit)))
+
+;; The lab really begins here
+
+
 (define COST 10)
 
 (display "cost:") (newline)
