@@ -10,7 +10,8 @@ public class Counter {
            See README.md to get more instructions, look at Counter.expected to see desired output. 
 	   No variable or loops allowed.
 	   No calling another builtin/3rd-party function that just solves the problem!
-	   You may pass whatever parameters are helpful. 
+	   You may pass whatever parameters are helpful to the 'printAll' function.
+	   Non-recursive solutions will receive a zero when the grader sees them. 
 	*/
 	
 	public static void main(String[] args){
