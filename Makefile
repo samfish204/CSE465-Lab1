@@ -32,7 +32,7 @@ submit: check submit-without-check
 
 submit-without-check:
 	git add -u 
-	git commit -m "Final submission" || echo "** Nothing has changed"
+	git commit -m "Submission" || echo "** Nothing has changed"
 	git push origin master 
 	git log -1
 	
