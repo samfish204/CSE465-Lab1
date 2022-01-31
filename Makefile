@@ -28,11 +28,14 @@ update-http: update-https
 update-https:
 	git pull https://gitlab.csi.miamioh.edu/cse465/instructor/lab01.git master
 
-submit: check
-	git add -u 
-	git commit -m "Final submission" || echo "Nothing has changed"
-	git push origin master 
+submit: check submit-without-check
 
+submit-without-check:
+	git add -u 
+	git commit -m "Final submission" || echo "** Nothing has changed"
+	git push origin master 
+	git log -1
+	
 # This uses grep to make sure there are no for-loops or while-loops
 check-if-instructions-followed : Counter.java
 	@[ -z "$(shell grep for Counter.java)" ] || (echo "You may not use for loops (the word 'for' appears in the file)" && false)
