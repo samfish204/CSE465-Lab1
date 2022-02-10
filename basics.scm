@@ -6,7 +6,9 @@
 (bind-default-condition-handler '() (lambda (x) (display x) (exit)))
 
 ;; The lab really begins here
-
+;; Samuel Fisher (fishe108)
+;; CSE465 Lab 1
+;; February 9th 2022
 
 (define COST 10)
 
@@ -43,6 +45,7 @@
 
 (display "Your Lambda for the perimeter:")(newline)
 ;; FILL IT IN HERE
+(display ((lambda (L W) (+ L L W W)) 50 25))
 (newline)
 
 
@@ -60,6 +63,7 @@
 
 (define (distance x1 y1 x2 y2)
 ;;; FILL THIS IN
+    (hyp (- x2 x1) (- y2 y1))
 )
 
 (display "Distance")(newline)
@@ -77,7 +81,7 @@
 
 ;; A number is small if it is less than 10
 (define (isSmall x)
-;;; FILL THIS IN	
+    (< x 10)
 )
 
 (display "isSmall")(newline)
@@ -108,6 +112,7 @@
 ;  3 | 4
 (define (isInQuadrant1 x y)
 ;;; FILL THIS IN
+    (and (>= x 0) (>= y 0))
 )
 
 (display "IsInQuadrant1:")(newline)
@@ -119,8 +124,26 @@
 
 (define (quadrant x y)
 ;;; FILL THIS IN
+    (cond
+        ( (and (>= x 0) (>= y 0)) 1)
+        ( (and (<  x 0) (>= y 0)) 2)
+        ( (and (< x 0) (< y 0)) 3)
+        ( else 4)
+    )
 )
 
+(define (quadrantv2 x y)
+    (if (>= x 0)
+        (if (>= y 0)
+            1
+            4
+        )
+        (if (>= y 0)
+            2
+            3
+        )
+    )
+)
 
 (display "Quadrant:")(newline)
 (display (quadrant 1 1))(newline)
@@ -132,6 +155,12 @@
 (define (computeGrossPay hours rate)
 ;;; FILL THIS IN
 ;;; Hours over 40 are given time and half. Hours over 60 are given double time.
+
+    (cond
+        ((> hours 60) (+ (* (- hours 60) (* rate 2)) (computeGrossPay (- hours (- hours 60)) rate)))
+        ((> hours 40) (+ (* (- hours 40) (* rate 1.5)) (computeGrossPay (- hours (- hours 40)) rate)))
+        (else (* hours rate))
+    )
 )
 
 (display "computeGrossPay:")(newline)
